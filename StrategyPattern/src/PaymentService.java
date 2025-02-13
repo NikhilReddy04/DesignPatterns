@@ -3,6 +3,7 @@ public class PaymentService {
     private boolean deliveryCostIncluded=false;
     PaymentStrategy strategy;
 
+
     public void setDeliveryCostIncluded(boolean deliveryCostIncluded) {
         this.deliveryCostIncluded = deliveryCostIncluded;
     }
@@ -18,7 +19,7 @@ public class PaymentService {
     public void processOrder(){
         strategy.collectPaymentDetails();
         if(strategy.validatePaymentDetails()){
-            strategy.pay(cost);
+            strategy.pay(cost+(deliveryCostIncluded?20:0));
         }
     }
 }

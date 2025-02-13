@@ -1,3 +1,5 @@
+//Decorator
+
 abstract class NotifierDecorator implements Notifier{
     protected Notifier notifier;
 

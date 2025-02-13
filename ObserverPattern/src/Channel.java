@@ -4,11 +4,11 @@ public class Channel {
     private String title;
     private ArrayList<Subscriber>subs=new ArrayList<>();
 
-    public void subscribeChannel(Subscriber sub){
+    public void addSubscriber(Subscriber sub){
         subs.add(sub);
     }
 
-    public void unSubscribeChannel(Subscriber sub){
+    public void removeSubscriber(Subscriber sub){
         subs.remove(sub);
     }
 

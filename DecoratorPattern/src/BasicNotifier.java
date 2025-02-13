@@ -1,3 +1,5 @@
+//Concrete component
+
 public class BasicNotifier implements Notifier{
 
     @Override
